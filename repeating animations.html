@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body
+        {
+            height:100%;
+            width:100%;
+            overflow: hidden;
+            margin:0;
+        }
+        .grass, .sky, .road
+        {
+            position: relative;
+        }
+        .sky{
+            background:lightskyblue;
+            height:40%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .grass{
+            height:30%;
+            background: seagreen;
+        }
+        .road{
+            height:30%;
+            width:100%;
+            background:dimgray;
+            box-sizing: border-box;
+            border-top:5px solid gray;
+            border-bottom:5px solid gray;
+        }
+        .lines{
+            box-sizing: border-box;
+            border:5px dashed #fff;
+            height: 0px;
+            width: 100%;
+            position: absolute;
+            top:48%;
+        }
+
+
+        /* Element to animate  */
+        .mario{
+            width: 50px; 
+            position: absolute;
+            top:25px;
+            animation-name:drive;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-delay:1s;
+            animation-iteration-count: infinite;
+        }
+
+        /* KEYFRAMES  */
+        @keyframes drive {
+            from{
+                    transform: translateX(-100);
+            }
+            to{
+                 transform:translateX(800px)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sky"></div>
+    <div class="grass"></div>
+    <div class="road">
+        <div class="lines"></div>
+            <img class="mario" src="mario.jfif" alt="missing" >
+        
+    </div>
+</body>
+</html>

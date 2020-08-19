@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circle animation</title>
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<style type="text/css">
+		.circle{
+			width:150px;
+			height: 150px;
+			background-color:blue;
+			border-radius:50%;
+		}
+			
+		@keyframes slide{
+			0%{
+				transform:translate3d(200px, 0px, 0px);
+				opacity: 0;
+			}
+			50%{
+ 			/*transform:translate3d(800px, 0px, 0px);*/
+			opacity: .5;
+			}
+			100%{
+				transform:translate3d(-200px, 0px, 0px);
+				opacity:0;
+			}
+		}
+		#mycircle{
+			animation:slide 3s 2 ease-in;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div class="circle" id="mycircle"></div>
+</body>
+<script >
+	var myelement = document.querySelector('.circle');
+	console.log('selected')
+	myelement.addEventListener('animationstart',start,false);
+	console.log('start event kicked')
+	myelement.addEventListener('animationiteration',update,false);
+	console.log('update event kicked')
+	myelement.addEventListener('animationend',end,false);
+	console.log('end event kicked')
+
+	function start(e){
+		document.body.style.backgroundColor = "pink";
+	}
+	function update(e){
+		document.body.style.backgroundColor = "steelblue";
+	}
+	function end(e){
+		document.body.style.backgroundColor = "khaki";
+	}
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circle animation</title>
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<style type="text/css">
+		.circle{
+			width:150px;
+			height: 150px;
+			background-color:blue;
+			border-radius:50%;
+		}
+			
+		@keyframes slide{
+			0%{
+				transform:translate3d(0px, 0px, 0px);
+			}
+			50%{
+			transform:translate3d(1000px, 500px, 0px);
+			opacity: .2;
+			}
+			100%{
+				transform:translate3d(0px, 0px, 0px);
+			}
+		}
+		#mycircle{
+			animation:slide 3s infinite;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div class="circle" id="mycircle"></div>
+</body>
+</html>

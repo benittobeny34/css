@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Easing funcitons</title>
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<style type="text/css">
+		body{
+			padding:1rem;
+
+		}
+		.circleA{
+			width:200px;
+			height:200px;
+			border-radius: 50%;
+			background-color:blue;
+			margin:2rem;
+			text-align:center;
+
+			
+		}
+
+		.circleB{
+			width:200px;
+			height:200px;
+			border-radius: 50%;
+			background-color:red;
+			margin:2rem;
+			text-align: center;
+			
+		}
+
+		@keyframes animation_A{
+			0%{
+				transform:translate3d(0,0,0);
+			}
+			50%{
+				transform:translate3d(300px,0,0);
+			}
+			100%{
+				transform:translate3d(0,0,0);
+			}
+		}
+		
+		#circleA{
+			animation: animation_A 5s infinite;
+			/*animation-timing-function:steps(10,start);*/
+			animation-timing-function:cubic-bezier(.3, .2, .5, .7);
+		}
+
+		@keyframes animation_B{
+			0%{
+				transform:translate3d(0,0,0);
+			}
+			50%{
+				transform:translate3d(300px,0,0);
+			}
+			100%{
+				transform:translate3d(0,0,0);
+			}
+		}
+		
+		#circleB{
+			animation: animation_B 5s infinite;
+			animation-timing-function: linear;
+		}
+
+	</style>
+</head>
+
+<body>
+	<p>Ease in Timing funtion example</p>
+	<div class="circleA" id="circleA">Benitto</div>
+	<p>Linear Timing funciton example</p>
+	<div class="circleB" id="circleB">Raj</div>
+</body>
+</html>

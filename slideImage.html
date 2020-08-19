@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slide image</title>
+	<script type="text/javascript" src="prefixfree.min.js"></script>
+	<style type="text/css">
+		body{
+			padding:1rem;
+			margin:2rem;
+		}
+		.picturecontainer{
+			/*width: 150px;
+			height:150px;*/
+			/*overflow:hidden;*/
+		}
+		.picturecontainer #image2{
+			transition: transform .5s ease-in;
+
+		}
+		.picturecontainer #image2:hover{
+ 		transform: translate3d(0px, -152px, 0px);
+		}
+
+	</style>
+</head>
+<body>
+	<h4>Image sliding</h4>
+	<div class="picturecontainer">
+	<img id="image1" src="loop.png" alt="image missing" width='150' height="150" >
+	<br>
+	<img id="image2" src="variable.jpg" alt="image missing" width='150' height="150">
+	</div>
+</body>
+</html>

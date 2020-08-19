@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform property</title>
+    <style>
+        body{
+            background:lightblue;
+            text-align: center;
+        }
+        .wrapper{
+            width:100%;
+            padding:20px;
+            box-sizing: border-box;
+        }
+        .circle{
+            width:100px;
+            margin:0 auto;
+            height:50px;
+            background-color: pink;
+            color:white;
+            cursor:pointer;
+            border-radius:200px;
+            padding-top:45px;
+            transition:background 1s ease-in,transform .5s ease-out;
+
+        }
+        .circle:hover{
+            background:rgb(80, 18, 151);
+            transform: rotate(360deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="scissors.png" alt="">
+        <div class="circle">Hover me</div>
+    </div>
+</body>
+</html>
