@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="./rpsstyle.css">
+    
+            
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+        </script>
+    </link>
+</link>
+
+</head>
+
+<body>
+    <section>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+       <ul class="nav-links">
+           <li id='flames'>Flames</li>
+           <li id='rps'>Rock  Paper Scissors</li>
+           <li id='about'>  About </li>
+       </ul>
+    </nav>
+    <div class="landing">
+
+        <p>Hi Friends here you can play 
+            Flames
+            Rock paper Scissor
+            games
+        </p>
+    </div>
+</section>
+<section id='flames' class='flames fadeOut'>
+    <h3>
+       Find Your RelationShip !!!!
+    </h3>
+    <form  class="form" action="#">
+        <div class="group">
+         <input type="text" id='uname' name='uname' autocomplete="off" required title='Your name' >
+         <label for="name" class='label-name'>
+             <span class="content-name">Name</span>
+         </label>
+        </div>
+        <div class="group">
+            <input type="text" id='pname' name='pname' autocomplete="off" required title='Partner name or Friend name' >
+            <label for="name" class='label-name'>
+                <span class="content-name">Your Partner Name</span>
+            </label>
+           </div>
+        </form>
+    <input class="btn btn-primary" id="button" type="button" value="check">
+    </input>
+    <h4 id='result'>
+    </h4>
+</section>
+<section id='rps' class="game fadeOut">
+    <div class="score">
+      <div class="player-score">
+        <h2>Player</h2>
+        <p>0</p>
+      </div>
+      <div class="computer-score">
+        <h2>Computer</h2>
+        <p>0</p>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>Rock Paper and Scissors</h1>
+      <button>Let's Play</button>
+    </div>
+
+    <div class="match fadeOut">
+      <h2 class="winner">Choose an option</h2>
+      <div class="hands">
+        <img class="player-hand" src="./assets/rock.png" alt="" />
+        <img class="computer-hand" src="./assets/rock.png" alt="" />
+      </div>
+      <div class="options">
+        <button class="rock">rock</button>
+        <button class="paper">paper</button>
+        <button class="scissors">scissors</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h5>&copy;beniraj</h5> 
+ </footer>
+</body>
+<script src="./app.js"></script>
+<script src="./apprps.js"></script>
+</html>
