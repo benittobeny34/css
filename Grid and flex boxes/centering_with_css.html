@@ -1,0 +1,132 @@
+<!-- Centering anything with css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Centering anything with css</title>
+	<style type="text/css">	
+
+	/******************************
+	for block centering
+	********************************/
+		*{
+			padding:0;
+			margin:0;
+			box-sizing:border-box;
+		}
+		p{
+			padding:1rem;
+			background-color:pink;
+		}
+		.one{
+			border:1px solid #999;
+			width:80%;
+			margin:1rem auto;
+		}
+		.one p:first-of-type{
+			
+			margin:0 auto; /*does nothing because the p tag always uses 100% width if width is less than 100% for this p tag it will give the space;*/
+   		    text-align:center; 
+   		}
+		.one p:last-of-type{
+		
+			margin:0 auto; /*does nothing because the p tag always uses 100% width*/
+			text-align:center; /*it centering the p tag text*/
+		}
+		.one span{
+			background-color:hsl(290,30%,98%);
+			width:80%;
+			margin:0 auto;
+			text-align:center;
+		}
+
+		.one span:first-of-type{
+			display: inline;
+		}
+		.one span:last-of-type{
+			display: inline-block;
+		}
+
+		/*************************************
+		for flex centering
+		**************************************/
+		.two{
+			border:1px solid #587;
+			width:90%;
+			margin:1rem auto;
+			display:flex;
+			flex-wrap: wrap;
+			flex-direction:row; /* default direcdtion is row */
+			justify-content:center; /*same-axis */
+			align-items:center;  /*cross-axis */
+		}
+		.two p{
+			flex-basis:45%;
+			text-align:center;
+		}
+
+		.three{
+			border:1px solid #888;
+			width:60%;
+			margin:1rem auto;
+			display:grid;
+			grid-template-columns: 3fr 1fr;
+			justify-content:flex-end; /*in display grid justify-content always along horizotalaly */
+		    align-items: flex-end;
+
+		}
+
+		.three p{
+
+		}
+	</style>
+</head>
+<body>
+ 	<main>
+	   <section class="one">
+	   	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>Small amount of text</p>
+		 <span>Inline</span>
+		 <br>
+		 <span>INLINE-BLOCK</span>
+	   </section>
+	   <section class="two">
+	   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>flex</p>
+	   	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>	
+	   	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>flex</p>
+	   </section>
+	   <section class="three">
+	   	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>grid</p>
+	   	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	   	 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	   	 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	   	 consequat.</p>
+	   	 <p>grid</p>
+	   </section>
+
+ 	</main>
+	
+</body>
+</html>

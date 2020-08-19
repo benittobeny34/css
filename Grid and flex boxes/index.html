@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Form </title>
+
+	<style type="text/css">
+		html
+		{
+			box-sizing: border-box;
+			font-size: 20px;
+			line-height: 1.6;
+			font-family: Roboto,Helvetica;
+			color:#878787;
+		}
+		*,*::before, *:after{
+			box-sizing:inherit;
+		    padding:0;
+		    margin:0;
+		}
+		main{
+			margin:1rem auto;
+			width:90%;
+			max-width: 100%;
+		}
+
+		select,option,input,label{
+			padding: 0.3rem 1rem;
+			font-size:1.2rem;
+			color:inherit;
+		}
+
+		.form-box{
+			padding:0.5rem 0;
+			display:flex;
+			flex-direction: column;
+		}
+
+		.form-box label{
+				display:none;
+   			}
+   		.form-box input, .form-box select, .form-box textarea{
+   				flex-basis:100%;
+   			}
+
+   		@media all and (min-width: 600px){
+   			.form-box {
+   				flex-direction:row;
+   			}
+   			
+   			.form-box label{
+						display:block;
+						flex-basis: 10rem;
+   					}
+   	   	.form-box input, .form-box select, .form-box textarea{
+  				flex-basis:0;
+   				flex-grow: 1;
+   			 	flex-shrink: 1;
+   					}
+   		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class='form-box'>
+			<label>Name</label>
+			<input type="text" name="name" placeholder="Name">
+		</div>
+		<div class='form-box'>
+			<label>Email</label>
+			<input type="email" name="email" placeholder="Email">
+		</div>
+		<div class='form-box'>
+			<label>male</label>
+			<input type="radio" name="gender">
+			<label>Female</label>
+			<input type="radio" name="gender">
+		</div>
+		<div class='form-box'>
+			<label>You are ?</label>
+			<select>
+				<option>Student</option>
+				<option>Employee</option>
+				<option>Staff</option>
+			</select>
+		</div>
+		<div class='form-box'>
+			<label>your thoughts</label>
+			<textarea col='5' row='5' placeholder="your thoughts"></textarea>
+			
+		</div>
+	</main>
+</body>
+</html>

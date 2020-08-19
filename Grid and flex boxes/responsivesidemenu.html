@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive side menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+      <span class="open-slide" id="open">
+          <a href="#" onclick="openSlideMenu()">
+            <img src="https://img.icons8.com/metro/26/000000/menu.png"/>
+          </a>
+      </span>
+      <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+      </ul>
+  </nav>
+  <div id="side-menu" class="side-nav">
+    <span id="close" ><a href="#" onclick="closeSlideMenu()">&times</a></span>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">About</a></li>
+</div>
+  
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script>
+  function openSlideMenu(){
+        console.log('inside')
+        $('.side-nav').css({'display':'flex','width':'280px'});
+        $('#close').css('display','block');
+  }
+
+  function closeSlideMenu(){
+      console.log('inside')
+      $('#close').css('display','none');
+      $('.side-nav').css({'display':'none','width':'0'});
+      
+  }
+</script>
+</html>

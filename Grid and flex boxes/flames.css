@@ -1,0 +1,31 @@
+main {
+    background-color: green;
+    margin: .5rem;
+}
+h3,h4,h5 {
+	text-align: center;
+	
+}
+.in-img img{
+	display:none;
+}
+
+footer {
+	text-align: center;
+}
+
+@media all and (max-width: 600px) {
+    input[type='text'] {
+        width: 50%;
+    }
+    .in-img img{
+    	display: block;
+    	padding-left: .5rem;
+    }
+    .in-img {
+
+    	display: flex;
+    	flex-direction: row;
+    }
+
+}

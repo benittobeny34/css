@@ -1,0 +1,49 @@
+.navbar{
+    position: relative;;
+    width:100%;
+    height:8vh;
+    background-color:dimgray;
+    /* overflow:hidden; */
+}
+
+.navbar .open-slide{
+    float:left;
+    padding:1rem 0 0 1rem;
+}
+.navbar .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .links li{
+    list-style-type: none;
+    padding:1rem 1rem;
+}
+a{
+    text-decoration: none;
+    color:red;
+}
+
+.side-nav{
+    width:0px;
+    height:95vh;
+    background-color: dimgray;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+
+}
+ .side-nav li{
+    list-style-type: none;
+    padding:1rem 0; 
+}
+
+#close{
+    position: absolute;
+    top:1.5rem;
+    left:270px;
+    display: none;
+}

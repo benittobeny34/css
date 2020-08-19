@@ -1,0 +1,27 @@
+main {
+    background-color: green;
+    margin: .5rem;
+}
+h3 {
+	text-align: center;
+	color:pink;
+}
+.in-img img{
+	display:none;
+}
+
+@media all and (max-width: 600px) {
+    input[type='text'] {
+        width: 50%;
+    }
+    .in-img img{
+    	display: block;
+    	padding-left: .5rem;
+    }
+    .in-img {
+
+    	display: flex;
+    	flex-direction: row;
+    }
+
+}

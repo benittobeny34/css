@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Flames
+            </title>
+            <link href="flames.css" rel="stylesheet" type="text/css">
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+                    </script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+                    </script>
+                </link>
+            </link>
+        </meta>
+    </head>
+    <body>
+        <main>
+            <h3>
+                Welcome To the Flames Calculator !!!!
+            </h3>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <label class="form-control">
+                            Your Name
+                        </label>
+                    </div>
+                    <div class="col-md-9 col-sm-12 in-img">
+                        <input class="form-control " id="uname" name="uname" type="text">
+                            <img alt="image missing" height="30px" src="love1.png" width="30px">
+                            </img>
+                        </input>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <label class="form-control">
+                            Your Partner Name
+                        </label>
+                    </div>
+                    <div class="col-md-9 col-sm-12 in-img">
+                        <input class="form-control " id="pname" name="fname" type="text">
+                            <img alt="image missing" height="30px" src="love2.png" width="30px">
+                            </img>
+                        </input>
+                    </div>
+                </div>
+            </div>
+            <input class="btn btn-primary" id="button"  type="button">
+            </input>
+
+            <h4>you and your partner becomes:<span id='result'></span></h4>
+        </main>
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+	    $('#button').on('click',function(){
+	    		var uname = $('#uname').val();
+	    		var pname = $('#pname').val();
+	    		
+	    		var flame = ['friend','lover','arrange','marriage','enemy','sister'];
+	    		var ones = [1,1,1,1,1,1];
+
+	    	    uname = uname.split(" ").join(""); 
+	    	    pname = pname.split(" ").join("");
+                ulength = uname.length;
+                plength = pname.length;
+	    	    var less =  ulength > plength ? pname : uname;
+	    	    var high = ulength > plength ? uname : pname;
+
+
+		        for(var i= 0 ; i<less.length ; i++)
+		        {
+		        	for(var j = 0 ; j<high.length ; j++){
+		        		if (less[i] == high[j]){
+		        			less[i] = '*';
+		        			high[j] = '*';
+		        		}
+		        	}
+		        }
+
+		        var count = 0;
+
+		        for(var i = 0 ; i<less.length ; i++)
+		        {
+		        	if (less[i] != '*')
+		        		count += 1;
+		        }
+
+		        for(var i = 0 ; i<high.length ; i++)
+		        {
+		        	if (high[i] != '*')
+		        		count += 1;
+		        }
+
+		        offset = 0;
+
+		        
+		        var remainder;
+		       // while(flame.length > 1){
+         //          remainder = (offset + count) % flame.length;
+         //          flame.splice(remainder-1,remainder);
+         //          console.log(flame)
+         //          offset = remainder > 0 ? remainder - 1 : 0;
+		       // }
+               var iter = 6;
+		       while(--iter){
+		       	cancel = count % (6+remainder);
+		       	ones[cancel-1] = 0;
+		       	remainder = 0;
+		       	for(var i = cancel+1; i<=5 ; i++)
+		       	{
+
+		       		if (ones[i] == 1){
+		       			remainder += 1;
+		       		}
+		       		console.log(ones);
+		       
+		       	}
+ 
+		       }
+		      // $('#result').html(flame[0])
+    	 })
+    	})
+    </script>
+</html>
